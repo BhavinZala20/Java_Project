@@ -35,7 +35,7 @@ public class MyActionListener1 implements ActionListener
 
 	MyActionListener1(home_policy m)
 	{
-		this.mf2_1;
+		this.mf2_1 = m;
 	}
 
 	
@@ -72,8 +72,8 @@ public class MyActionListener1 implements ActionListener
 		// for Home Insuarance
 		if(e.getActionCommand().equals("Home insurances"))
 		{
-           	mf2_i=new Home();
-			this.mf2_i.setVisible(true);
+           	mf2_1 = new home_policy();
+			this.mf2_1.setVisible(true);
 		}
 		if(e.getActionCommand().equals("<-"))
 		{

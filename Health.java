@@ -146,6 +146,7 @@ public class Health extends JFrame
 		lbl4.setBounds(500,170,1500,500);
 		lbl5.setBounds(500,220,1500,500);
 		lbl6.setBounds(500,270,1500,500);
+		
 		lbl8.setBounds(900,600,1500,500);
 
 		Save.addActionListener(ml);
