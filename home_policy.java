@@ -2,13 +2,13 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-
 import javafx.stage.WindowEvent;
-
 import java.lang.*;
 
 public class home_policy extends JFrame
 {
+	JButton plans,back;
+	
     JLabel lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12, lbl13, lbl14, lbl15, lbl16;
 
     MyActionListener1 ml = new MyActionListener1(this);
@@ -16,7 +16,7 @@ public class home_policy extends JFrame
     home_policy()
     {
         setLayout(null);
-        setBounds(0,0,550,1000);
+        setBounds(0,0,1600,1000);
 
         lbl1 = new JLabel("Dear Policyholde");
         lbl2 = new JLabel("Your Simple Home Insurance Policy entitles You to various Benefits. The sections that");
@@ -38,6 +38,9 @@ public class home_policy extends JFrame
         lbl14 = new JLabel("which includes any other written statement/ communication, telephone call. This");
         lbl15 = new JLabel("nformation must be complete, correct, true and accurate in every respect and forms");
         lbl16 = new JLabel("part of this contract.");
+		
+		plans= new JButton("get plans");
+        back= new JButton("go back");
 
         Font f1 = new Font("Arial",Font.ITALIC,25);	
         
@@ -60,7 +63,8 @@ public class home_policy extends JFrame
 		lbl15.setFont(f1);
 		lbl16.setFont(f1);
 
-        
+        back.setFont(f1);
+        plans.setFont(f1);
 
         add(lbl1);
 		add(lbl2);
@@ -81,25 +85,33 @@ public class home_policy extends JFrame
 		add(lbl15);
 		add(lbl16);
 
+		add(back);
+        add(plans);
 
-        lbl1.setBounds(100,1,1500,500);
-		lbl2.setBounds(100,55,1500,500);
-		lbl3.setBounds(100,105,1500,500);
-		lbl4.setBounds(100,155,1500,500);
-		lbl5.setBounds(100,205,1500,500);
+        lbl1.setBounds(100,50,1500,25);
+		lbl2.setBounds(100,100,1500,25);
+		lbl3.setBounds(100,130,1500,25);
+		lbl4.setBounds(100,160,1500,25);
+		lbl5.setBounds(100,190,1500,25);
 
-		lbl6.setBounds(100,265,1500,500);
-        lbl7.setBounds(100,305,1500,500);
-		lbl8.setBounds(100,355,1500,500);
-        lbl9.setBounds(100,405,1500,500);
-		lbl10.setBounds(100,455,1500,500);
+		lbl6.setBounds(100,220,1500,25);
+        lbl7.setBounds(100,250,1500,25);
+		lbl8.setBounds(100,280,1500,25);
+        lbl9.setBounds(100,310,1500,25);
+		lbl10.setBounds(100,340,1500,25);
 
-		lbl11.setBounds(100,565,1500,500);
-		lbl12.setBounds(100,615,1500,500);
-		lbl13.setBounds(100,665,1500,500);
-		lbl14.setBounds(100,715,1500,500);
-		lbl15.setBounds(100,765,1500,500);
-        lbl16.setBounds(100,815,1500,500);
+		lbl11.setBounds(100,370,1500,25);
+		lbl12.setBounds(100,400,1500,25);
+		lbl13.setBounds(100,430,1500,25);
+		lbl14.setBounds(100,460,1500,25);
+		lbl15.setBounds(100,590,1500,25);
+        lbl16.setBounds(100,620,1500,25);
+		
+		back.setBounds(300,700,200,65);
+        plans.setBounds(500,700,200,65);
+		
+		back.addActionListener(ml);
+        plans.addActionListener(ml);
 
         addWindowListener(new WindowAdapter()
         {

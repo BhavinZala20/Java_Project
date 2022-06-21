@@ -11,11 +11,13 @@ import java.awt.Font.*;
 public class Main_Frame extends JFrame
 {
 	
-	Label lbl;
+	JLabel lbl1, lbl2;
 	
 	JButton str;
 	
 	Font f1,f2,f3;
+
+	ImageIcon img;
 	
 	MyActionListener1 ml = new MyActionListener1(this);
 
@@ -25,19 +27,26 @@ public class Main_Frame extends JFrame
 		setLayout(null);
 		this.setBounds(0,0,1600,1000);
 
-		lbl = new Label("Welcome To Insurance Management System");
+		img = new ImageIcon("p6.JPG");
+		lbl2 = new JLabel(img);
+		lbl2.setBounds(0,0,img.getIconWidth(), img.getIconHeight());
+		lbl2.setVisible(true);
+
+		lbl1 = new JLabel("Welcome To Insurance Management System");
 		str = new JButton("Start");
+		
 		f3 = new Font("Arial",Font.BOLD,50);
 		f1 = new Font("Arial",Font.BOLD,15);
 		f2 = new Font("Roman",Font.BOLD,50);
 
-		lbl.setBounds(250,200,1500,50);
+		lbl1.setBounds(250,200,1500,50);
 		str.setBounds(600,400,300,200);
 		
-		lbl.setFont(f2);
+		lbl1.setFont(f2);
 		str.setFont(f3);
 		
-		add(lbl);
+		add(lbl1);
+		add(lbl2);
 		add(str);
 		
 		str.addActionListener(ml);
