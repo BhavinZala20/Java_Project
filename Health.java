@@ -20,8 +20,6 @@ public class Health extends JFrame
 
 	Health()
 	{
-	
-		
 		setLayout(null);
 		setBounds(0,0,550,965);
 		
@@ -111,6 +109,7 @@ public class Health extends JFrame
 
 		save.addActionListener(ml);
 		back.addActionListener(ml);
+		clear.addActionListener(ml);
 			
 		addWindowListener(new WindowAdapter()
 			{

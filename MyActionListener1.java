@@ -53,38 +53,51 @@ public class MyActionListener1 implements ActionListener
 		{
             ls=new List();
 			this.ls.setVisible(true);
+			this.mf.setVisible(false);
 		}
 		
 		// For Main Frame
-		if(e.getActionCommand().equals("< Back"))
+		if(e.getActionCommand().equals("back"))
 		{
-			
-			ls.setVisible(false);
+			mf = new Main_Frame();
 			this.mf.setVisible(true);
+			ls.setVisible(false);
 		}
 		
 		// For Health 
-        if(e.getActionCommand().equals("Health insurances"))
+        if(e.getActionCommand().equals("health insurances"))
 		{
 			mf1_1=new health_policy();
 			this.mf1_1.setVisible(true);
+			ls.setVisible(false);
 		}
 
-		if(e.getActionCommand().equals("Get Plans"))
+		if(e.getActionCommand().equals("Get plans"))
 		{
 			mf1 = new Health();
 			this.mf1.setVisible(true);
+			this.mf1_1.setVisible(false);
 		}
 
-		if(e.getActionCommand().equals("<"))
+		if(e.getActionCommand().equals("<|"))
 		{
-			this.mf1.setVisible(false);
+			ls = new List();
+			this.mf1_1.setVisible(false);
 			this.ls.setVisible(true);
 		}
 
 		if(e.getActionCommand().equals("Save"))
 		{
-			Modle md = new Modle();
+			String member_name = this.mf1.txt1.getText();
+			String dob = this.mf1.txt3.getText();
+			String age = this.mf1.txt4.getText();
+			String phoneno = this.mf1.txt5.getText();
+
+			String gender = (String)this.mf1.cmb1.getSelectedItem();
+			
+
+			Modle md = new Modle(member_name,gender,dob,age,phoneno);
+
 			try
 			{
 				md.saveObject("customer.txt");
@@ -93,9 +106,33 @@ public class MyActionListener1 implements ActionListener
 			{
 				System.out.println(ef);
 			}
+			/*Modle md1 = new Modle();
+			try
+			{
+				md1.readObject("customer.txt");
+			}
+			catch(Exception efd)
+			{
+				System.out.println(efd);
+			}*/
+
 			
 		}
+		
+		if(e.getActionCommand().equals("Clear"))
+		{
+			this.mf1.txt1.setText("");
+			this.mf1.txt3.setText("");
+			this.mf1.txt4.setText("");
+			this.mf1.txt5.setText("");
+		}
 
+		if(e.getActionCommand().equals("<"))
+		{
+			mf1_1 = new health_policy();
+			this.mf1_1.setVisible(true);
+			this.mf1.setVisible(false);
+		}
 		
 
 
@@ -108,16 +145,17 @@ public class MyActionListener1 implements ActionListener
 
 		
 		// for Home Insuarance
-		if(e.getActionCommand().equals("Home insurances"))
+		/*if(e.getActionCommand().equals("home insurances"))
 		{
 		    mf2_1 = new home_policy();
 			this.mf2_1.setVisible(true);
+			ls.setVisible(false);
 		}
 		if(e.getActionCommand().equals("<-"))
 		{
 			this.mf2.setVisible(false);
 			this.ls.setVisible(true);
-		}
+		}*/
     }
 
 	

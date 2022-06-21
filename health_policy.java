@@ -6,16 +6,16 @@ import java.lang.*;
 
 public class health_policy extends JFrame
 {
-	JButton Plans,Back;
+	JButton plans,back;
 	
 	JLabel lbl0, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12, lbl13, lbl14, lbl15, lbl16, lbl17, lbl18;
 	
-	MyActionListener1 ml = new MyActionListener1(this);
+	MyActionListener1 ml;
 	
     health_policy()
     {
         setLayout(null);
-		
+        ml = new MyActionListener1(this);
 		setBounds(0,0,1600,1000);
         
         lbl0= new JLabel("Health Insurance Policy");
@@ -39,8 +39,8 @@ public class health_policy extends JFrame
         lbl18= new JLabel("endorsements attaching to or forming part hereof, either at inception or during the Policy Period.");
        
         
-        Plans= new JButton("Get Plans");
-        Back= new JButton("<|");
+        plans= new JButton("Get plans");
+        back= new JButton("<|");
 
         Font f1 = new Font("Arial",Font.ITALIC,25);
         Font f2 = new Font("Times New Roman",Font.BOLD,50);
@@ -65,8 +65,8 @@ public class health_policy extends JFrame
         lbl17.setFont(f1);
         lbl18.setFont(f1);
 
-        Back.setFont(f1);
-        Plans.setFont(f1);
+        back.setFont(f1);
+        plans.setFont(f1);
 
         add(lbl0);
         add(lbl1);
@@ -88,8 +88,8 @@ public class health_policy extends JFrame
         add(lbl17);
         add(lbl18);
 
-        add(Back);
-        add(Plans);
+        add(back);
+        add(plans);
       
         lbl0.setBounds(300,50,1600,50);
         lbl1.setBounds(50,100,1600,50);
@@ -111,11 +111,11 @@ public class health_policy extends JFrame
         lbl17.setBounds(50,580,1600,50);
         lbl18.setBounds(50,610,1600,50);
 
-        Back.setBounds(300,700,200,65);
-        Plans.setBounds(500,700,200,65);
+        back.setBounds(300,700,200,65);
+        plans.setBounds(500,700,200,65);
       
-        Back.addActionListener(ml);
-        Plans.addActionListener(ml);
+        back.addActionListener(ml);
+        plans.addActionListener(ml);
 
         addWindowListener(new WindowAdapter()
 			{

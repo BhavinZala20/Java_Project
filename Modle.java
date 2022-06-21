@@ -1,5 +1,4 @@
 import java.io.*;
-
 public class Modle
 {
     String member_name;
@@ -10,8 +9,8 @@ public class Modle
 
 	
 	Modle()
-	{
-		
+	{	
+
 	}
 
 	Modle(String a, String b,String c, String d, String e)
@@ -27,7 +26,7 @@ public class Modle
 	
 	public String toString()
 	{
-		return "Member Name : "+this.member_name+"Gender : "+this.gender+" Date Of Birth = "+this.dob+" Age: "+this.age+" Phone No :"+this.phoneno;
+		return "Member Name : "+this.member_name+"Gender : "+this.gender+ "Date Of Birth = "+this.dob+" Age: "+this.age+" Phone No :"+this.phoneno;
 	}
 	public String writeInFile()
 	{
@@ -67,7 +66,7 @@ public class Modle
 			for(int i=0;i<data.length;i++)
 			{
 				String attr[] = data[i].split(",");
-				cus[i] = new Modle(attr[0],attr[1],attr[2],attr[3],attr[4]);
+				cus[i] = new Modle(attr[0],attr[1],attr[2],attr[3]);
 			}
 			for(int i=0;i<cus.length;i++)
 			{
