@@ -12,6 +12,7 @@ public class MyActionListener1 implements ActionListener
 	Health mf1;
 	Home mf2;
 	home_policy mf2_1;
+	health_policy mf1_1;
 
 	MyActionListener1(Main_Frame m)
     {
@@ -26,6 +27,11 @@ public class MyActionListener1 implements ActionListener
     MyActionListener1(Health m)
 	{
 		this.mf1 = m;
+	}
+
+	MyActionListener1(health_policy m)
+	{
+		this.mf1_1 = m;
 	}
 
 	MyActionListener1(Home m)
@@ -57,9 +63,16 @@ public class MyActionListener1 implements ActionListener
 			this.mf.setVisible(true);
 		}
 		
+		// For Health 
         if(e.getActionCommand().equals("Health insurances"))
 		{
-			mf1=new Health();
+			mf1_1=new health_policy();
+			this.mf1_1.setVisible(true);
+		}
+
+		if(e.getActionCommand().equals("Get Plans"))
+		{
+			mf1 = new Health();
 			this.mf1.setVisible(true);
 		}
 
@@ -69,10 +82,35 @@ public class MyActionListener1 implements ActionListener
 			this.ls.setVisible(true);
 		}
 
+		if(e.getActionCommand().equals("Save"))
+		{
+			Modle md = new Modle();
+			try
+			{
+				md.saveObject("customer.txt");
+			}
+			catch(Exception ef)
+			{
+				System.out.println(ef);
+			}
+			
+		}
+
+		
+
+
+		// for health_policy
+		if(e.getActionCommand().equals("<|"))
+		{
+			this.mf1_1.setVisible(false);
+			this.ls.setVisible(true);
+		}
+
+		
 		// for Home Insuarance
 		if(e.getActionCommand().equals("Home insurances"))
 		{
-           	mf2_1 = new home_policy();
+		    mf2_1 = new home_policy();
 			this.mf2_1.setVisible(true);
 		}
 		if(e.getActionCommand().equals("<-"))
@@ -81,4 +119,6 @@ public class MyActionListener1 implements ActionListener
 			this.ls.setVisible(true);
 		}
     }
+
+	
 }
