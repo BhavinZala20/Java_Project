@@ -28,10 +28,12 @@ public class Modle
 	{
 		return "Member Name : "+this.member_name+"Gender : "+this.gender+ "Date Of Birth = "+this.dob+" Age: "+this.age+" Phone No :"+this.phoneno;
 	}
+
 	public String writeInFile()
 	{
 		return this.member_name+","+this.gender+","+this.dob+","+this.age+","+this.phoneno;
 	}
+	
 	public void saveObject(String fileName) throws IOException
 	{
 		File f = new File(fileName);

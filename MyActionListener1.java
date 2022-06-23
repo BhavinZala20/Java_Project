@@ -126,6 +126,7 @@ public class MyActionListener1 implements ActionListener
 			{
 				md.saveObject("health.txt");
 			}
+
 			catch(Exception ef)
 			{
 				System.out.println(ef);
@@ -180,8 +181,8 @@ public class MyActionListener1 implements ActionListener
 			this.mf2.setVisible(true);
 			this.mf2_1.setVisible(false);
 		}
-		if(e.
-		getActionCommand().equals("Save"))
+
+		if(e.getActionCommand().equals("Save"))
 		{
 			String member_name = this.mf2.txt1.getText();
 			String dob = this.mf2.txt3.getText();
@@ -197,6 +198,7 @@ public class MyActionListener1 implements ActionListener
 			{
 				md.saveObject("home.txt");
 			}
+
 			catch(Exception ef)
 			{
 				System.out.println(ef);
@@ -254,6 +256,7 @@ public class MyActionListener1 implements ActionListener
 
 		if(e.getActionCommand().equals("Save           "))
 		{
+
 			String member_name = this.mf3.txt1.getText();
 			String dob = this.mf3.txt3.getText();
 			String age = this.mf3.txt4.getText();
@@ -268,6 +271,7 @@ public class MyActionListener1 implements ActionListener
 			{
 				md.saveObject("car.txt");
 			}
+
 			catch(Exception ef)
 			{
 				System.out.println(ef);
@@ -347,10 +351,10 @@ public class MyActionListener1 implements ActionListener
 		
 		if(e.getActionCommand().equals("Clear            "))
 		{
-			this.mf2.txt1.setText("");
-			this.mf2.txt3.setText("");
-			this.mf2.txt4.setText("");
-			this.mf2.txt5.setText("");
+			this.mf4.txt1.setText("");
+			this.mf4.txt3.setText("");
+			this.mf4.txt4.setText("");
+			this.mf4.txt5.setText("");
 		}
 
 		if(e.getActionCommand().equals("< back"))

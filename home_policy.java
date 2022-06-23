@@ -9,7 +9,9 @@ public class home_policy extends JFrame
 {
 	JButton plans,back;
 	
-    JLabel lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12, lbl13, lbl14, lbl15, lbl16;
+    JLabel lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12, lbl13, lbl14, lbl15, lbl16, lbl17;
+
+    ImageIcon img;
 
     MyActionListener1 ml = new MyActionListener1(this);
 
@@ -18,7 +20,14 @@ public class home_policy extends JFrame
         setLayout(null);
         setBounds(0,0,1600,1000);
 
+        img = new ImageIcon("p1.JPG");
+		lbl17 = new JLabel(img);
+		lbl17.setBounds(0,0,img.getIconWidth(), img.getIconHeight());
+		lbl17.setVisible(true);
+		
+
         lbl1 = new JLabel("Dear Policyholde");
+
         lbl2 = new JLabel("Your Simple Home Insurance Policy entitles You to various Benefits. The sections that");
         lbl3 = new JLabel("are in force under this Policy and amount of insurance available to You under each of ");
         lbl4 = new JLabel("those sections, and in total, are those that You have chosen and are listed in the ");
@@ -84,28 +93,31 @@ public class home_policy extends JFrame
 		add(lbl14);
 		add(lbl15);
 		add(lbl16);
+        add(lbl16);
+        add(lbl17);
 
 		add(back);
         add(plans);
 
         lbl1.setBounds(100,50,1500,25);
+
 		lbl2.setBounds(100,100,1500,25);
 		lbl3.setBounds(100,130,1500,25);
 		lbl4.setBounds(100,160,1500,25);
 		lbl5.setBounds(100,190,1500,25);
 
-		lbl6.setBounds(100,220,1500,25);
-        lbl7.setBounds(100,250,1500,25);
-		lbl8.setBounds(100,280,1500,25);
-        lbl9.setBounds(100,310,1500,25);
-		lbl10.setBounds(100,340,1500,25);
+		lbl6.setBounds(100,290,1500,25);
+        lbl7.setBounds(100,320,1500,25);
+		lbl8.setBounds(100,350,1500,25);
+        lbl9.setBounds(100,380,1500,25);
+		lbl10.setBounds(100,410,1500,25);
 
-		lbl11.setBounds(100,370,1500,25);
-		lbl12.setBounds(100,400,1500,25);
-		lbl13.setBounds(100,430,1500,25);
-		lbl14.setBounds(100,460,1500,25);
-		lbl15.setBounds(100,590,1500,25);
-        lbl16.setBounds(100,620,1500,25);
+		lbl11.setBounds(100,510,1500,25);
+		lbl12.setBounds(100,540,1500,25);
+		lbl13.setBounds(100,570,1500,25);
+		lbl14.setBounds(100,600,1500,25);
+		lbl15.setBounds(100,630,1500,25);
+        lbl16.setBounds(100,660,1500,25);
 		
 		back.setBounds(300,700,200,65);
         plans.setBounds(500,700,200,65);

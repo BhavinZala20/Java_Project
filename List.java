@@ -27,7 +27,7 @@ public class List extends JFrame
 		this.setBounds(0,0,1600,1000);
 		ml = new MyActionListener1(this);
 
-        img = new ImageIcon("p2.JFIF");
+        img = new ImageIcon("p4.JPG");
 		lbl2 = new JLabel(img);
 		lbl2.setBounds(0,0,img.getIconWidth(), img.getIconHeight());
 		lbl2.setVisible(true);
@@ -68,9 +68,9 @@ public class List extends JFrame
 		
 		back.addActionListener(ml);
 		health.addActionListener(ml);
-		//home.addActionListener(ml);
-		//car.addActionListener(ml);
-		//family.addActionListener(ml);
+		home.addActionListener(ml);
+		car.addActionListener(ml);
+		family.addActionListener(ml);
 		
 		addWindowListener(new WindowAdapter()
 			{

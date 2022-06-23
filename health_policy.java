@@ -7,8 +7,10 @@ import java.lang.*;
 public class health_policy extends JFrame
 {
 	JButton plans,back;
+
+    ImageIcon img;
 	
-	JLabel lbl0, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12, lbl13, lbl14, lbl15, lbl16, lbl17, lbl18;
+	JLabel lbl0, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12, lbl13, lbl14, lbl15, lbl16, lbl17, lbl18, lbl19;
 	
 	MyActionListener1 ml;
 	
@@ -17,6 +19,11 @@ public class health_policy extends JFrame
         setLayout(null);
         ml = new MyActionListener1(this);
 		setBounds(0,0,1600,1000);
+
+        img = new ImageIcon("p1.JPG");
+		lbl19 = new JLabel(img);
+		lbl19.setBounds(0,0,img.getIconWidth(), img.getIconHeight());
+		lbl19.setVisible(true);
         
         lbl0= new JLabel("Health Insurance Policy");
         lbl1 = new JLabel("The following words or terms shall have the meaning ascribed to them wherever they appear in this ");
@@ -87,6 +94,7 @@ public class health_policy extends JFrame
         add(lbl16);
         add(lbl17);
         add(lbl18);
+        add(lbl19);
 
         add(back);
         add(plans);

@@ -87,6 +87,8 @@ public class Home extends JFrame
 		add(clear);
 		
 		add(back);
+
+		add(lbl7);
 		
 		add(home_insurance);
 

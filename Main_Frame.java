@@ -21,6 +21,9 @@ public class Main_Frame extends JFrame
 	
 	MyActionListener1 ml = new MyActionListener1(this);
 
+	
+	
+
 	Main_Frame()
 	{
 		super("INSURANCE MANAGEMENT");
@@ -34,10 +37,13 @@ public class Main_Frame extends JFrame
 
 		lbl1 = new JLabel("Welcome To Insurance Management System");
 		str = new JButton("Start");
+
+		//setForeground(Color.WHITE);
 		
 		f3 = new Font("Arial",Font.BOLD,50);
 		f1 = new Font("Arial",Font.BOLD,15);
 		f2 = new Font("Roman",Font.BOLD,50);
+		
 
 		lbl1.setBounds(250,200,1500,50);
 		str.setBounds(600,400,300,200);

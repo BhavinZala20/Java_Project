@@ -29,7 +29,7 @@ public class Family extends JFrame
 		txt4=new JTextField();
 		txt5=new JTextField();
 
-		img = new ImageIcon("p3.JPG");
+		img = new ImageIcon("p1.JPG");
 		lbl7 = new JLabel(img);
 		lbl7.setBounds(0,0,img.getIconWidth(), img.getIconHeight());
 		lbl7.setVisible(true);
@@ -87,6 +87,8 @@ public class Family extends JFrame
 		add(clear);
 		
 		add(back);
+
+		add(lbl7);
 		
 		add(family_insurance);
 
