@@ -8,7 +8,7 @@ import java.lang.*;
 import java.awt.Font.*;
 
 
-public class Main_Frame extends JFrame
+public class Thanks extends JFrame
 {
 	
 	JLabel lbl;
@@ -21,28 +21,26 @@ public class Main_Frame extends JFrame
 	
 	MyActionListener1 ml = new MyActionListener1(this);
 
-	Main_Frame()
+	Thanks()
 	{
-		super("INSURANCE MANAGEMENT");
+		super("Thanks");
 		setLayout(null);
-		//this.setBounds(0,0,1920,1080);
-		
 		setExtendedState(getExtendedState() | JFrame.MAXIMIZED_BOTH);
 		
-		img = new ImageIcon("MainFrame.png");
+		img = new ImageIcon("Thanks.png");
 		lbl = new JLabel(img);
 		lbl.setBounds(0,0,img.getIconWidth(), img.getIconHeight());
 		lbl.setVisible(true);
 
-		str = new JButton("START");
-		
-		f1 = new Font("Segoe UI Black",Font.BOLD,60);
+		str = new JButton("OK");
+		f1 = new Font("Segoe UI Black",Font.BOLD,30);
 
-		str.setBounds(150,500,300,200);
+		str.setBounds(200,700,300,100);
 		
 		str.setFont(f1);
 		
 		add(lbl);
+		
 		add(str);
 		
 		str.addActionListener(ml);
@@ -58,7 +56,7 @@ public class Main_Frame extends JFrame
 
 	public static void main(String args[])
 	{
-			Main_Frame mf = new Main_Frame();
+			Thanks mf = new Thanks();
 			mf.setVisible(true);
 	}
 }
