@@ -63,7 +63,7 @@ public class Car extends JFrame
 		add(txt3);
 		add(txt4);
 		add(txt5);
-		add(cmb1);
+		// add(cmb1);
 
 		add(save);
 		add(clear);
